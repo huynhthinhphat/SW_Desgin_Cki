@@ -1,28 +1,151 @@
-1.Cập nhật hồ sơ bệnh nhận
-Các lớp phân tích của ca sử dụng Payment:
-Entity:
-Employee: Lưu thông tin cơ bản của nhân viên, như tên, ID, và phương thức thanh toán.
-PaymentMethod: Lưu trữ chi tiết phương thức thanh toán (gửi qua thư, nhận tại chỗ, hoặc chuyển khoản trực tiếp).
-PayrollRecord: Lưu thông tin về kỳ lương, số tiền thanh toán, ngày thanh toán.
-Boundary:
-PaymentUI: Giao diện cho nhân viên lựa chọn hoặc xác nhận phương thức thanh toán.
-Control:
-PaymentController: Điều phối các thao tác trong quá trình thanh toán, lấy thông tin từ Employee và PaymentMethod, xử lý yêu cầu thanh toán, và cập nhật trạng thái thanh toán trong PayrollRecord.
-Quan hệ giữa các lớp phân tích:
-Employee và PaymentMethod:
-Loại mối quan hệ: Một - Một
-Giải thích: Employee có một PaymentMethod duy nhất để xác định phương thức thanh toán của mình. Điều này giúp mỗi nhân viên được liên kết rõ ràng với một trong các phương thức thanh toán như PickUp, Mail, hoặc DirectDeposit
-PaymentMethod và các lớp con (Pick-up, Mail, DirectDeposit):
-Loại mối quan hệ: Một - Nhiều
-Giải thích: PaymentMethod là lớp cha trừu tượng, có nhiều lớp con đại diện cho các phương thức thanh toán cụ thể. Các lớp con như PickUp, Mail, và DirectDeposit kế thừa thuộc tính và hành vi từ PaymentMethod, và có thể mở rộng thêm chi tiết nếu cần.
-PaymentSystem và Employee:
-Loại mối quan hệ: Một - Nhiều
-Giải thích: PaymentSystem quản lý các giao dịch thanh toán cho nhiều nhân viên (Employee). PaymentSystem sẽ lưu trữ và quản lý thông tin thanh toán của mỗi nhân viên để đảm bảo tính chính xác và nhất quán trong các kỳ thanh toán.
-Biểu đồ sequence:
-Biểu đồ lớp:
-Giải thích:
-
-2.Quản lý thuốc và điều trị
-
-
-3.Cung cấp thông tin về thuốc và chẩn đoán
+1. Cập nhật hồ sơ bệnh nhận
+  - Các lớp phân tích của ca sử dụng Cập nhật hồ sơ bệnh nhận:
+    - Entity:
+      - PatientProfile: Lớp này đại diện cho hồ sơ bệnh nhân gồm các thông tin như mã định danh bệnh nhân duy nhất, thông tin cá nhân, đánh giá rủi ro về tự gây hại/bạo lực, chẩn đoán các tình trạng, phương pháp điều trị, các loại thuốc đã kê đơn, các cuộc tư vấn, giới thiệu.
+      - PatientRecordManagementSystem: Lớp này đại diện cho hệ thống quản lý hồ sơ bệnh nhân, là cơ sơ dữ liệu chứa các hồ sơ bệnh nhân.
+      - ClinicalStaff: Lớp này đại diện cho nhân viên lâm sàng yêu cầu tạo, cập nhật hồ sơ của bệnh nhân.
+      - Medication: Lớp này đại diện cho các loại thuốc mà bệnh nhân đã và đang sử dụng.
+      - Consultation: Lớp này đại diện cho những cuộc tư vấn về tình trạng sức khỏe của bệnh nhân. Mỗi cuộc tư vấn sẽ ghi lại thông tin về vấn đề sức khỏe hiện tại của bệnh nhân, chẩn đoán, điều trị, kế hoạch theo dõi,...
+      - InformationOfTheMentalHealthAct: Lớp này đại diện cho thông tin về các đánh giá giam giữ được thực hiện theo Đạo luật Sức khỏe Tâm thần.
+    - Boundary:
+      - FormUpdateUI: Giao diện mà nhân viên lâm sàng sử dụng để tra cứu và cập nhật hồ sơ của bệnh nhân nếu cần. Giao diện sẽ hiển thị thông tin của bệnh nhân, lịch sử các cuộc tư vấn và ghi lại các phương pháp điều trị và thuốc đã kê đơn.
+      - PatientRecordManagementSystemConnect: Giao diện tương tác với hệ thống quản lý hồ sơ bệnh nhân khi nhân viên lâm sàng cần cập nhật hồ sơ bệnh nhân.
+    - Control:
+      - PatientProfileController: Điều phối quá trình cập nhật hồ sơ bệnh nhân. Xử lý các yêu cầu để cập nhật hồ sơ của bệnh nhân từ FormUpdateUI. Dữ liệu sau khi được xử lý sẽ được lưu vào PatientRecordManagementSystem.
+  - Quan hệ giữa các lớp phân tích:
+    - ClinicalStaff và FormUpdateUI:
+      - Loại mối quan hệ: Một - Một.
+      - Giải thích: Một ClinicalStaff có thể tương tác với một FormUpdateUI để gửi yêu cầu cập nhật PatientProfile và lưu vào PatientRecordManagementSystem.
+    - ClinicalStaff và PatientProfile:
+       - Loại mối quan hệ: Một - Nhiều.
+       - Giải thích: Mỗi ClinicalStaff có thể quản lý hồ sơ của nhiều PatientProfile trong suốt quá trình điều trị.
+    - PatientProfile và PatientRecordManagementSystem
+       - Loại mối quan hệ: Nhiều - Một.
+       - Giải thích: PatientRecordManagementSystem có thể chứa thông tin của nhiều PatientProfile và được yêu cầu xử lý các hành động thông qua FormUpdateUI bởi ClinicalStaff.
+    - PatientProfile và Medication
+       - Loại mối quan hệ: Một - Nhiều.
+       - Giải thích: Mỗi PatientProfile có thể liên kết với nhiều Medication nghĩa là một bệnh nhân có thể được kê nhiều loại thuốc khác nhau trong suốt quá trình điều trị.
+    - PatientProfile và Consultation
+       - Loại mối quan hệ: Một - Nhiều.
+       - Giải thích: Mỗi PatientProfile có thể liên kết với nhiều Consultation nghĩa là một bệnh nhân có thể trải qua nhiều cuộc tư vấn hoặc thăm khám với các bác sĩ trong suốt quá trình điều trị.
+    - PatientProfile và InformationOfTheMentalHealthAct
+       - Loại mối quan hệ: Một - Nhiều.
+       - Giải thích: Mỗi PatientProfile có thể liên kết với nhiều InformationOfTheMentalHealthAct có nghĩa là một bệnh nhân có thể có nhiều sự kiện hoặc thông tin liên quan đến Luật Sức khỏe Tâm thần trong suốt quá trình điều trị.
+    - ClinicalStaff và Medication:
+       - Loại mối quan hệ: Một - Nhiều.
+       - Giải thích: Một ClinicalStaff có thể kê nhiều loại thuốc cho nhiều bệnh nhân khác nhau trong suốt quá trình điều trị. 
+    - ClinicalStaff và Consultation:
+       - Loại mối quan hệ: Một - Nhiều (1 : N).
+       - Giải thích: Một ClinicalStaff có thể thực hiện nhiều Consultation, tương ứng với việc thực hiện nhiều cuộc thăm khám cho các bệnh nhân khác nhau.
+    - FormUpdateUI và PatientProfileController:
+       - Loại mối quan hệ: Một - Một.
+       - Giải thích: FormUpdateUI là giao diện người dùng mà nhân viên lâm sàng sử dụng để tra cứu và cập nhật hồ sơ bệnh nhân. Giao diện này gửi yêu cầu cho PatientProfileController, điều khiển quá trình cập nhật hồ sơ bệnh nhân. PatientProfileController sẽ xử lý và cập nhật các thay đổi vào PatientRecordManagementSystem.
+    - PatientRecordManagementSystemConnect và PatientRecordManagementSystem:
+       - Loại mối quan hệ: Một - Một.
+       - Giải thích: PatientRecordManagementSystemConnect là lớp giao diện tương tác với hệ thống quản lý hồ sơ bệnh nhân. Mỗi yêu cầu từ PatientRecordManagementSystemConnect sẽ tương tác trực tiếp với PatientRecordManagementSystem để cập nhật hoặc lấy thông tin hồ sơ bệnh nhân.
+  - Biểu đồ sequence:
+    ![Diagram](https://www.planttext.com/plantuml/png/b9IzJiCm58NtFCKLEo_G0Q6c0ZeWLQGP68thDXR9TN5la3eYXWvCY965dm61g5YOug534E_X9-0La0kb3cfBsUBeVEV-7CiVPh8z8AOfpzA0SL8QmbIYv2oDY7Mxm0OGHa6VQP9SzXaIREmedSNz3YCHDpUS86vM1Ir6KY2rjEhAL8GAIQiq5NegdXyNGWU2AztPPyXw8XD8qN108WiLek0qCt3V_w2dMACU144OmUOMnCqQ79PFEN1RFEH0cW6tvZ67n9eh6BpVmf4r8qm0a_8EWxZfe7dVDTYrPYnXw5cKpnaSIrjCiYexfxuzNElB37mII2likOv6G8arbzWBld7drAZNeEqLNTnverwfsjQsk8TJQyw0al8LUq0Ibw1UBN_oBujrQ6zij-yzQSqvJaUvM8F_oIcqnRWFcDXYJ7zpQqJ5VSEPozevLMYovbgkZ2ZqvHrhNY2LrepcDsr5HCUsc12SvEw7NtPrDAkeNv6qlxPvLDugUBiigtgtwnjCW3lDRA_HuXod3XNzji2EUr4-0G00__y30000)
+  - Biểu đồ lớp:\
+    ![Diagram](https://www.planttext.com/plantuml/png/Z5MzJXj14ExlALPk8aK2XVOgY8qL5yR81bgqxCtThTYRDRjpYX2YY59Gf0bAcSgYIXg8qd6AKjZoUzmJv1MYEnlkrd_GMDvlT_w--MRkN_Ptrn8tb2RAyzwmoTSy-u8nmoYU_E1CZ4U2gJpxFlI4ujQoff8e1LS3uc78hZp6MFct4_XiG4PYL4384wYVZLRL-TgR-sfhanmF0qvmt65N5Nx8IGBIeT6XL30BqWa0IOOIJDtl8HYhaQiEXjeadAJ6-dLVslDUU2Ar0XHEGYt98zHMsZfuP81J0aXE20DM63aiV7SXaAACujWrDTfKqLBu3fBHGIeSV4sLJLqyLWhC2YRw8BG9kXnv14L-WqjBaDGVLfdDwAhERcCE5XhJgefpO6rvv3pS2nA9qf8fdVPrIivrsy152YWkw-2Wq5MB5o-BtmBQny051ZA0_J04GOkKak4IL_8zRycPnAYb1Mcphby3ufHMfizirHisuwjPGrp6wZTkwgibkM8Q-i2jnhOs9z9AUhqCkq2n3bQLljImjbPAVpmUkXaUQ8ArIZsw7AwOoTeazSAZ6Bg0nDK7u8hYFK4pjWeLMMSJE4LnWbwuPorOEvkcPyPieUGa0GoUklfUQmKSozeK5z0BMq05hmk2B7tMhfvSRY9hPjG71Tm-iNAzOiabUNOhsKNAaSLvTiCYcMVtpkvpjrvZfy6sjbZZtVRssyRYjlBPHPe_tY5Jupzhx7OQxkhp6KqVfYEC68r7mbjmE0zJ1QpDki_Ek6PHddrBNZHpHEypCldZNLdrYvOlQS9dOlnx8qUBiUCy-oLOBFFi1ZSQTkkrdez_iidjT8HB6LV4RjwOFbFJX_IKJ9xTUquFbbqiBsQVJMvbddrAsNcH-kVdFDP4UsrQJOq89Ozp7PoMEl1s0OFYi_mV003__mC0)
+    - Giải thích:
+      - ClinicalStaff
+        - Thuộc tính:
+          - StaffId: Mã của mỗi nhân viên lâm sàng
+          - name: Tên của mỗi nhân viên lâm sàng
+          - role: Vai trò của mỗi nhân viên lâm sàng
+       - FormUpdateUI
+       - PatientProfile
+         - Thuộc tính:
+           - Identifier: Mã định danh của bệnh nhân
+           - PersonalInformation: Thông tin cá nhân của bệnh nhân
+           - RiskOfViolence: Đánh giá rủi ro bạo lực hoặc tự gây hại
+           - Diagnosis: Chẩn đoán tình trạng
+           - Treatment: Phương pháp điều trị
+           - PrescriptionMedications: Các loại thuốc đã kê đơn
+           - Consultation: Các cuộc tư vấn
+           - Introduction: Giới thiệu
+       - PatientProfileController
+       - PatientRecordManagementSystem 
+       - Medication
+         - Thuộc tính:
+           - MedicationId: Mã thuốc (dùng để xác định duy nhất thuốc)
+           - Name:  Tên thuốc
+           - Description: Mô tả về thuốc (công dụng, cách sử dụng, v.v.)
+           - Dosage: Liều lượng (ví dụ: 500mg, 2 viên mỗi ngày)
+           - AdministrationRoute: Đường sử dụng thuốc (uống, tiêm, bôi, v.v.)
+           - Frequency: Tần suất sử dụng (ví dụ: mỗi ngày 3 lần)
+           - StartDate: Ngày bắt đầu dùng thuốc
+           - EndDate: Ngày kết thúc dùng thuốc (nếu có)
+           - SideEffects: Tác dụng phụ của thuốc (nếu có)
+           - Contraindications: Chống chỉ định (những trường hợp không nên sử dụng thuốc này)
+           - PrescribingDoctor: Bác sĩ kê đơn thuốc
+           - PrescriptionStatus: Trạng thái kê đơn (chưa sử dụng, đang sử dụng, đã kết thúc)
+       - Consultation
+         - Thuộc tính:
+           -   ConsultationId: Mã định danh duy nhất của cuộc tư vấn/thăm khám
+           -   ConsultationDate: Ngày và giờ của cuộc tư vấn/thăm khám
+           -   Identifier: Mã định danh của bệnh nhân (liên kết với PatientProfile)
+           -   StaffId: Mã định danh của bác sĩ hoặc nhân viên y tế
+           -   ReasonForVisit: Lý do bệnh nhân đến thăm khám (triệu chứng, vấn đề sức khỏe)
+           -   Diagnosis: Chẩn đoán của bác sĩ sau khi thăm khám
+           -   TreatmentMethods: Kế hoạch điều trị, bao gồm thuốc, phương pháp điều trị, v.v.
+           -   Prescription: Danh sách thuốc kê đơn (nếu có)
+           -   FollowUpDate: Ngày hẹn tái khám (nếu có)
+           -   Notes: Ghi chú bổ sung từ bác sĩ (thông tin quan trọng, khuyến cáo, v.v.)
+           -   ConsultationType: Loại cuộc thăm khám (Khám bệnh, tư vấn sức khỏe, khám định kỳ, v.v.)
+       - InformationOfTheMentalHealthAct
+         - Thuộc tính:
+           - NamesClinicalStaff: Tên của các nhân viên lâm sàng tham gia đánh giá
+           - DateOfAssessment: Ngày đánh giá
+           - IsRecommendations: Việc giam giữ và điều trị bắt buộc có được đề xuất hay không
+           - PlaceOfDetention: Nơi giam giữ
+           - DateOfDetention: Ngày bắt đầu giam giữ
+           - TreatmentMethods: Phương pháp điều trị được đề xuất cho bệnh nhân
+           - DateOfRelease: Ngày được thả
+2. Quản lý thuốc và điều trị
+ - Các lớp phân tích của ca sử dụng Quản lý thuốc và điều trị:
+    - Entity:
+      - PatientProfile: Lớp này đại diện cho hồ sơ bệnh nhân gồm các thông tin như mã định danh bệnh nhân duy nhất, thông tin cá nhân, đánh giá rủi ro về tự gây hại/bạo lực, chẩn đoán các tình trạng, phương pháp điều trị, các loại thuốc đã kê đơn, các cuộc tư vấn, giới thiệu.
+      - PatientRecordManagementSystem: Lớp này đại diện cho hệ thống quản lý hồ sơ bệnh nhân, là cơ sơ dữ liệu chứa các hồ sơ bệnh nhân.
+      - ClinicalStaff: Lớp này đại diện cho nhân viên lâm sàng yêu cầu tạo, cập nhật hồ sơ của bệnh nhân.
+      - Medication: Lớp này đại diện cho các loại thuốc mà bệnh nhân đã và đang sử dụng.
+      - MedicineManagementSystem: Lớp này đại diện cho cơ sơ dữ liệu chứa các loại thuốc đã được phê duyệt bởi cơ quan y tế.
+    - Boundary:
+      - FormPrescriptionUI: Giao diện mà nhân viên lâm sàng sử dụng để thêm các loại thuốc vào một đơn thuốc.
+      - PatientRecordManagementSystemConnect: Giao diện tương tác với hệ thống quản lý hồ sơ bệnh nhân khi nhân viên lâm sàng cần cập nhật hồ sơ bệnh nhân.
+      - MedicineManagementSystemConnect: Giao diện tương tác với hệ thống quản lý hồ sơ bệnh nhân khi nhân viên lâm sàng cần tạo đơn thuốc cho bệnh nhân.
+    - Control:
+      - PrescriptionController: Điều phối quá trình tạo đơn thuốc cho bệnh nhân. Xử lý các yêu cầu tìm kiếm thuốc và thêm các loại thuốc vào một đơn từ FormPrescriptionUI. Dữ liệu sau khi được xử lý sẽ được lưu vào PatientRecordManagementSystem.
+  - Quan hệ giữa các lớp phân tích:
+    - ClinicalStaff và PatientProfile:
+       - Loại mối quan hệ: Một - Nhiều.
+       - Giải thích: Mỗi ClinicalStaff có thể quản lý hồ sơ của nhiều PatientProfile trong suốt quá trình điều trị.
+    - ClinicalStaff và FormPrescriptionUI:
+      - Loại mối quan hệ: Một - Một.
+      - Giải thích: Một ClinicalStaff sẽ sử dụng giao diện FormPrescriptionUI để tìm kiếm, lựa chọn và thêm các loại thuốc vào đơn thuốc của bệnh nhân.
+    - ClinicalStaff và Medication: x
+      - Loại mối quan hệ: Một - Nhiều
+      - Giải thích: Một ClinicalStaff có thể kê nhiều loại thuốc cho nhiều bệnh nhân khác nhau trong suốt quá trình điều trị.
+    - FormPrescriptionUI và PrescriptionController:
+      - Loại mối quan hệ: Một - Một
+      - Giải thích: Giao diện FormPrescriptionUI sẽ gửi các yêu cầu về việc thêm thuốc vào đơn thuốc thông qua PrescriptionController.
+    - PrescriptionController và PatientRecordManagementSystem: x
+      - Loại mối quan hệ: Một - Một
+      - Giải thích: PrescriptionController sẽ điều phối việc cập nhật hồ sơ bệnh nhân trong PatientRecordManagementSystem. Sau khi dữ liệu thuốc được xử lý, PrescriptionController sẽ lưu thông tin vào hệ thống quản lý hồ sơ bệnh nhân.
+    - PatientRecordManagementSystem và PatientProfile:
+      - Loại mối quan hệ: Một - Nhiều
+      - Giải thích: PatientRecordManagementSystem có thể chứa hồ sơ của nhiều bệnh nhân và mỗi bệnh nhân có thể có nhiều loại thuốc được kê đơn trong suốt quá trình điều trị.
+    - PrescriptionController và MedicineManagementSystemConnect:
+      - Loại mối quan hệ: Một - Một
+      - Giải thích: PrescriptionController sử dụng MedicineManagementSystemConnect để tìm kiếm và lựa chọn thuốc từ hệ thống quản lý thuốc khi tạo đơn thuốc cho bệnh nhân
+    - MedicineManagementSystemConnect và MedicineManagementSystem:
+      - Loại mối quan hệ: Một - Một
+      - Giải thích: MedicineManagementSystemConnect tương tác với MedicineManagementSystem để tìm kiếm và thêm các loại thuốc vào đơn thuốc.
+    - PatientProfile và Medication:
+       - Loại mối quan hệ: Một - Nhiều.
+       - Giải thích: Mỗi PatientProfile có thể liên kết với nhiều Medication nghĩa là một bệnh nhân có thể được kê nhiều loại thuốc khác nhau trong suốt quá trình điều trị.
+  - Biểu đồ sequence:
+    ![Diagram](https://www.planttext.com/plantuml/png/Z9GnRjim58PtdU8Xko_WmGWiewq70qKL0-t8K8n9H7eogAUW7eiC6OeEHYzGDIWA6FNKTX6730no3vwWLoWenvRbo44sKVY_z__l5w5_vkuq9wQfI9E0SSeqX8b2nLaI4Rku09P360LpfabnDMT8SF8gq-bRBNAkrPnKXjFnYPTDnstPlYJCa7IM94BNqkROHYOYLboXc31aCv4Af6YHaqZ3355mshB--MLWJKn4l3aTv6Ea1D8xmJCTF-UuKNJwFZkZXaV380WZw0rWEeO-VB2h0hYhVXP0qgvI85aui-J1TEmrJJ7GXzVEh1KiZX5xsWtfuq4Vpkol52wLg-vsMk3sD-Ik-el1LjSRDBruI1SBk7BL3mJfp0sGT6Q9ivrPesrxQLVTmfKpdo1cA26t9PVx2RTU7Ojr0tihrOMzKSvSOvtdSoVIT1jAPxxWRkVxfJFNS6bNSBzyAF5ummrWRu7NGmwIj6w0TtBLUWueNRKctzTNo1zAE7Vc1YMWjDynQ2Ez0Oo6Xo19-yTNh9hCf3ES7Pau6dP5UMzBlXc8_fRifZyDqB7vnmRkwlvi4_3SbfaF-mqbSFzcMsLq-7qUDteA1AS2O_-B-Gy00F__0m00)
+  - Biểu đồ lớp:\
+    ![Diagram](https://www.planttext.com/plantuml/png/Z5JDRjim3BxhAOHS0WneqLrxABebAU13so3UTjSasY0cKnj57u9YJxR37cclCDXkOicDqrmicpyVoU-ZzU_Ft_ieXgLjl59BlI51sMlhJOmGLN_ghH44aYs72Zte5wMrBXoGO8N0jxeKHgexwnOu1ZA-e2fmOmG3fUuTnX_FrJSC7iX2wbcZgIb4ZAdn2uEH1aYo4WpHClxii1_1eUshP7chGB7rygPyGSB1jJQp_rRvb3kmWTsZ8LD3LxlSHu56lnpZLXu9hV6bcAeQoEXV2vVM8jDa0tBmu_SHQnnW01g_SxId2Tfwv20pXsZgBF2JQv0m2lUWkz1AvdvW-DK2sNrgBBjzM9ikidjsfWsvt52YWqrLWPKfyy86wQGihyfzHwhNmKhWELbBCTB66RQGuAGuI_qvjEGCJxVt8N2Jedyj4Z6tvqHV1IAmaeJFTP16BWSMWX_wE1HAEdZrU-0-8L-enSU5lhhgZxUTgnF390cdYwYPscdY1JIeYxYw5FGysX7cvlhwms9o0SqGDeIEVz3viU_wynqzrNjw9zFEXHu6FToUi-tERlTinZaU9fIfUo3NtV7_0G00__y30000)
+3. Cung cấp thông tin về thuốc và chẩn đoán
