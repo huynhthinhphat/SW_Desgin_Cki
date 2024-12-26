@@ -46,14 +46,14 @@
   - Biểu đồ sequence:
     ![Diagram](https://www.planttext.com/plantuml/png/b9IzJiCm58NtFCKLEo_G0Q6c0ZeWLQGP68thDXR9TN5la3eYXWvCY965dm61g5YOug534E_X9-0La0kb3cfBsUBeVEV-7CiVPh8z8AOfpzA0SL8QmbIYv2oDY7Mxm0OGHa6VQP9SzXaIREmedSNz3YCHDpUS86vM1Ir6KY2rjEhAL8GAIQiq5NegdXyNGWU2AztPPyXw8XD8qN108WiLek0qCt3V_w2dMACU144OmUOMnCqQ79PFEN1RFEH0cW6tvZ67n9eh6BpVmf4r8qm0a_8EWxZfe7dVDTYrPYnXw5cKpnaSIrjCiYexfxuzNElB37mII2likOv6G8arbzWBld7drAZNeEqLNTnverwfsjQsk8TJQyw0al8LUq0Ibw1UBN_oBujrQ6zij-yzQSqvJaUvM8F_oIcqnRWFcDXYJ7zpQqJ5VSEPozevLMYovbgkZ2ZqvHrhNY2LrepcDsr5HCUsc12SvEw7NtPrDAkeNv6qlxPvLDugUBiigtgtwnjCW3lDRA_HuXod3XNzji2EUr4-0G00__y30000)
   - Biểu đồ lớp:\
-    ![Diagram](https://www.planttext.com/plantuml/png/Z5MzJXj14ExlALPk8aK2XVOgY8qL5yR81bgqxCtThTYRDRjpYX2YY59Gf0bAcSgYIXg8qd6AKjZoUzmJv1MYEnlkrd_GMDvlT_w--MRkN_Ptrn8tb2RAyzwmoTSy-u8nmoYU_E1CZ4U2gJpxFlI4ujQoff8e1LS3uc78hZp6MFct4_XiG4PYL4384wYVZLRL-TgR-sfhanmF0qvmt65N5Nx8IGBIeT6XL30BqWa0IOOIJDtl8HYhaQiEXjeadAJ6-dLVslDUU2Ar0XHEGYt98zHMsZfuP81J0aXE20DM63aiV7SXaAACujWrDTfKqLBu3fBHGIeSV4sLJLqyLWhC2YRw8BG9kXnv14L-WqjBaDGVLfdDwAhERcCE5XhJgefpO6rvv3pS2nA9qf8fdVPrIivrsy152YWkw-2Wq5MB5o-BtmBQny051ZA0_J04GOkKak4IL_8zRycPnAYb1Mcphby3ufHMfizirHisuwjPGrp6wZTkwgibkM8Q-i2jnhOs9z9AUhqCkq2n3bQLljImjbPAVpmUkXaUQ8ArIZsw7AwOoTeazSAZ6Bg0nDK7u8hYFK4pjWeLMMSJE4LnWbwuPorOEvkcPyPieUGa0GoUklfUQmKSozeK5z0BMq05hmk2B7tMhfvSRY9hPjG71Tm-iNAzOiabUNOhsKNAaSLvTiCYcMVtpkvpjrvZfy6sjbZZtVRssyRYjlBPHPe_tY5Jupzhx7OQxkhp6KqVfYEC68r7mbjmE0zJ1QpDki_Ek6PHddrBNZHpHEypCldZNLdrYvOlQS9dOlnx8qUBiUCy-oLOBFFi1ZSQTkkrdez_iidjT8HB6LV4RjwOFbFJX_IKJ9xTUquFbbqiBsQVJMvbddrAsNcH-kVdFDP4UsrQJOq89Ozp7PoMEl1s0OFYi_mV003__mC0)
+    ![Diagram](https://www.planttext.com/plantuml/png/b5RDJjj04BxxALPSMf0uz6fL5Jy1DL83A07kszrnic8z6tR7L0XnG3rmvbZrX7hZqlQALN48uZty17s5oewJsEiOQ0wnCl_ppSpd_4qVDXnnIqciW-0DsvxS2gQpzFkOxI0fEW-4viwnRQrG2Qu7nAE8NGIi-1I_kZ9a0x8AXwKKUGoUo1gz45q6PT03JWgG3go9b8PvrAu491Kfi5wK0x3E8DTTZ8oDEIc3daLVkPFzw5WP3IZy8ZgA3z4uvJpveGLECI3vwImuOTKupzC3gKIHqVVUDkWIJSkgwI9P8nDHK_dTzq4OAtiS-H3o8WRdZY2UWp6kOUH2zaavUbz7xaDfowMiAzwkXkpCA5dgXq2UNZMWNWsziPI-oLXo0izzF7twBhEiyrONwCtxMeWQ-xFNt9_EOXA-nZW-zCqtPQnGER95Whv9oBVOjN2Q08fpJpx8Rw73S_lykvJke6p81ah2JXI1e2KRGPOhRDkOSgy-AnnsZ21Zdzcx0N5A5W7cY5QtRevfLTX0jQfiDDDwSiill0_S6TmrzbWvHVzxPZsWaP4jg2oRyQxHsdmv6ZVAtZEKdqHhduVduoMqKw6F_UXm13r0uleZS4sZJK5pEFCzT3NYyplb1FlHfdFWt9G_gf2w_BBZ653Ejc3B60qSPmrhBc0_wW3bs3SNkmXUqLPYlm3brBKF6hYR0NRfiVkMIL1oE-FtNMFZe-B4ZxhiufKajMqGeG3CZrwSWD5BURxKQR0BahD6W7FJ0lhvPJhokClnCvZgfKzkY-HnbjueTffmPACilMP3bQK_EHFpmeBwUspbtGfRNoyUDG12Ha-_dcvno6XoArgSrbRy5rZ8JfFi_WSoFVaJUBhSl4prFF67Z4P9bduJx2nBhzh2hArKIJLaMatka9razm_qZ4kDDLxhzDAvrEEqOjMhbdiokMEFDq-ts6xlrKgZBFqjs4XbwJK6jMbLfjYwQI5xl55PUfMmapp4Lvmr_FncDqEtJwswCS46eCp_Klq3003__mC0)
     - Giải thích:
       - ClinicalStaff
         - Thuộc tính:
           - StaffId: Mã của mỗi nhân viên lâm sàng
           - name: Tên của mỗi nhân viên lâm sàng
           - role: Vai trò của mỗi nhân viên lâm sàng
-       - FormUpdateUI
+       - FormUpdateUI: Giao diện người dùng mà nhân viên lâm sàng sử dụng để tra cứu và cập nhật thông tin hồ sơ bệnh nhân.
        - PatientProfile
          - Thuộc tính:
            - Identifier: Mã định danh của bệnh nhân
@@ -65,7 +65,13 @@
            - Consultation: Các cuộc tư vấn
            - Introduction: Giới thiệu
        - PatientProfileController
-       - PatientRecordManagementSystem 
+         - processUpdateRequest(): Xử lý các yêu cầu cập nhật từ giao diện người dùng, thực hiện việc nhận thông tin mới, sau đó kiểm tra và xử lý các yêu cầu đó. Sau khi kiểm tra và xác thực dữ liệu, phương thức này sẽ truyền thông tin đến hệ thống lưu trữ để lưu lại các thay đổi.
+         - saveUpdatedProfile(): Lưu thông tin hồ sơ bệnh nhân sau khi đã được cập nhật, thực hiện công việc lưu trữ các thay đổi vào hệ thống quản lý hồ sơ bệnh nhân. Phương thức này được gọi sau khi phương thức processUpdateRequest hoàn tất việc xử lý.
+       - PatientRecordManagementSystem
+         - patientProfiles: List<PatientProfile>: Danh sách chứa các đối tượng PatientProfile, mỗi đối tượng trong danh sách đại diện cho một hồ sơ bệnh nhân.
+         - addPatientProfile(): Thêm một hồ sơ bệnh nhân mới vào hệ thống. Phương thức này sẽ được gọi khi có một bệnh nhân mới được đăng ký vào hệ thống, hoặc khi có thông tin mới cần được lưu trữ trong hồ sơ của bệnh nhân.
+         - getPatientProfile(identifier: String): PatientProfile: Nhận vào một mã định danh bệnh nhân và trả về đối tượng PatientProfile tương ứng với mã đó.
+         - updatePatientProfile(profile: PatientProfile): cập nhật thông tin trong hồ sơ bệnh nhân. Khi có yêu cầu cập nhật từ người dùng, phương thức này sẽ được gọi để thay đổi hoặc bổ sung thông tin vào đối tượng PatientProfile trong hệ thống.
        - Medication
          - Thuộc tính:
            - MedicationId: Mã thuốc (dùng để xác định duy nhất thuốc)
@@ -121,23 +127,23 @@
        - Loại mối quan hệ: Một - Nhiều.
        - Giải thích: Mỗi ClinicalStaff có thể quản lý hồ sơ của nhiều PatientProfile trong suốt quá trình điều trị.
     - ClinicalStaff và FormPrescriptionUI:
-      - Loại mối quan hệ: Một - Một.
-      - Giải thích: Một ClinicalStaff sẽ sử dụng giao diện FormPrescriptionUI để tìm kiếm, lựa chọn và thêm các loại thuốc vào đơn thuốc của bệnh nhân.
+       - Loại mối quan hệ: Một - Một.
+       - Giải thích: Một ClinicalStaff sẽ sử dụng giao diện FormPrescriptionUI để tìm kiếm, lựa chọn và thêm các loại thuốc vào đơn thuốc của bệnh nhân.
     - ClinicalStaff và Medication: x
-      - Loại mối quan hệ: Một - Nhiều
-      - Giải thích: Một ClinicalStaff có thể kê nhiều loại thuốc cho nhiều bệnh nhân khác nhau trong suốt quá trình điều trị.
+       - Loại mối quan hệ: Một - Nhiều
+       - Giải thích: Một ClinicalStaff có thể kê nhiều loại thuốc cho nhiều bệnh nhân khác nhau trong suốt quá trình điều trị.
     - FormPrescriptionUI và PrescriptionController:
-      - Loại mối quan hệ: Một - Một
-      - Giải thích: Giao diện FormPrescriptionUI sẽ gửi các yêu cầu về việc thêm thuốc vào đơn thuốc thông qua PrescriptionController.
+       - Loại mối quan hệ: Một - Một
+       - Giải thích: Giao diện FormPrescriptionUI sẽ gửi các yêu cầu về việc thêm thuốc vào đơn thuốc thông qua PrescriptionController.
     - PrescriptionController và PatientRecordManagementSystem: x
-      - Loại mối quan hệ: Một - Một
-      - Giải thích: PrescriptionController sẽ điều phối việc cập nhật hồ sơ bệnh nhân trong PatientRecordManagementSystem. Sau khi dữ liệu thuốc được xử lý, PrescriptionController sẽ lưu thông tin vào hệ thống quản lý hồ sơ bệnh nhân.
+       - Loại mối quan hệ: Một - Một
+       - Giải thích: PrescriptionController sẽ điều phối việc cập nhật hồ sơ bệnh nhân trong PatientRecordManagementSystem. Sau khi dữ liệu thuốc được xử lý, PrescriptionController sẽ lưu thông tin vào hệ thống quản lý hồ sơ bệnh nhân.
     - PatientRecordManagementSystem và PatientProfile:
-      - Loại mối quan hệ: Một - Nhiều
-      - Giải thích: PatientRecordManagementSystem có thể chứa hồ sơ của nhiều bệnh nhân và mỗi bệnh nhân có thể có nhiều loại thuốc được kê đơn trong suốt quá trình điều trị.
+       - Loại mối quan hệ: Một - Nhiều
+       - Giải thích: PatientRecordManagementSystem có thể chứa hồ sơ của nhiều bệnh nhân và mỗi bệnh nhân có thể có nhiều loại thuốc được kê đơn trong suốt quá trình điều trị.
     - PrescriptionController và MedicineManagementSystemConnect:
       - Loại mối quan hệ: Một - Một
-      - Giải thích: PrescriptionController sử dụng MedicineManagementSystemConnect để tìm kiếm và lựa chọn thuốc từ hệ thống quản lý thuốc khi tạo đơn thuốc cho bệnh nhân
+      - Giải thích: PrescriptionController sử dụng MedicineManagementSystemConnect để tìm kiếm và lựa chọn thuốc từ hệ thống quản lý thuốc khi tạo đơn thuốc cho bệnh nhân.
     - MedicineManagementSystemConnect và MedicineManagementSystem:
       - Loại mối quan hệ: Một - Một
       - Giải thích: MedicineManagementSystemConnect tương tác với MedicineManagementSystem để tìm kiếm và thêm các loại thuốc vào đơn thuốc.
@@ -147,9 +153,65 @@
   - Biểu đồ sequence:
     ![Diagram](https://www.planttext.com/plantuml/png/Z9GnRjim58PtdU8Xko_WmGWiewq70qKL0-t8K8n9H7eogAUW7eiC6OeEHYzGDIWA6FNKTX6730no3vwWLoWenvRbo44sKVY_z__l5w5_vkuq9wQfI9E0SSeqX8b2nLaI4Rku09P360LpfabnDMT8SF8gq-bRBNAkrPnKXjFnYPTDnstPlYJCa7IM94BNqkROHYOYLboXc31aCv4Af6YHaqZ3355mshB--MLWJKn4l3aTv6Ea1D8xmJCTF-UuKNJwFZkZXaV380WZw0rWEeO-VB2h0hYhVXP0qgvI85aui-J1TEmrJJ7GXzVEh1KiZX5xsWtfuq4Vpkol52wLg-vsMk3sD-Ik-el1LjSRDBruI1SBk7BL3mJfp0sGT6Q9ivrPesrxQLVTmfKpdo1cA26t9PVx2RTU7Ojr0tihrOMzKSvSOvtdSoVIT1jAPxxWRkVxfJFNS6bNSBzyAF5ummrWRu7NGmwIj6w0TtBLUWueNRKctzTNo1zAE7Vc1YMWjDynQ2Ez0Oo6Xo19-yTNh9hCf3ES7Pau6dP5UMzBlXc8_fRifZyDqB7vnmRkwlvi4_3SbfaF-mqbSFzcMsLq-7qUDteA1AS2O_-B-Gy00F__0m00)
   - Biểu đồ lớp:\
-    ![Diagram](https://www.planttext.com/plantuml/png/Z5JDRjim3BxhAOHS0WneqLrxABebAU13so3UTjSasY0cKnj57u9YJxR37cclCDXkOicDqrmicpyVoU-ZzU_Ft_ieXgLjl59BlI51sMlhJOmGLN_ghH44aYs72Zte5wMrBXoGO8N0jxeKHgexwnOu1ZA-e2fmOmG3fUuTnX_FrJSC7iX2wbcZgIb4ZAdn2uEH1aYo4WpHClxii1_1eUshP7chGB7rygPyGSB1jJQp_rRvb3kmWTsZ8LD3LxlSHu56lnpZLXu9hV6bcAeQoEXV2vVM8jDa0tBmu_SHQnnW01g_SxId2Tfwv20pXsZgBF2JQv0m2lUWkz1AvdvW-DK2sNrgBBjzM9ikidjsfWsvt52YWqrLWPKfyy86wQGihyfzHwhNmKhWELbBCTB66RQGuAGuI_qvjEGCJxVt8N2Jedyj4Z6tvqHV1IAmaeJFTP16BWSMWX_wE1HAEdZrU-0-8L-enSU5lhhgZxUTgnF390cdYwYPscdY1JIeYxYw5FGysX7cvlhwms9o0SqGDeIEVz3viU_wynqzrNjw9zFEXHu6FToUi-tERlTinZaU9fIfUo3NtV7_0G00__y30000)
+    ![Diagram](https://www.planttext.com/plantuml/png/b5NDZjCm4BxdAQnUsYBjYhrM22sqNQaIXQfPk7ljINP4CYxsP565U38EF1AlW9AcYUCceVJGA3FV_EIRR-m_ltxVEvQMYpoBfc9DZ7mKAfFEWOkgfzX9HY3UMPDW1k979AhVHWCn9WXs8MAsI6djs85rXcIseSJON38Q2X1xT5y_9L_GP40A0kSAPKh6eGliZnOavq0SbhFWbCL3MMSB6bLLqIt41tJyfhMyhV5BGwx8kEwh0lccCsn3R8qkLAVzdr6NapqeO_LMaaoXR2q-EeQyeUZGOUxSKfVFSpsfTTSnEvoUYs00yuLuCQZhi1Gu2CEBkSp357LiST2IuV-gDWmiCoHKCejP9adpnTNRHWSZ8fc7KxQch17IsawhoTYQBj9-l4oxQhKGUeoJQGX_ftCaT6oh0djJS8XuiF2j05B7m1wNIxEI9RxyhwrhqXUs63MiamGKXufU6c8haJpDzYdx2IbT6SN6ZYW_Pic56s0K2GOrcjU0Kfg3EoErRespAgJUdzPyeSlUY7Q8Sp-uR7Wgtfk2jBJX0VHWREv_w-TDqxq3QTMpLsb-tJSy6Z_Xp5Ftz3GMavsQEE-xXwxz6TXsqQrHu9oFsfUwSToahlkLBp1SUG_PIGZFU73Y2VWx03LaT3TkSZSHDpTYylhszjKatEz-wDsaXyhHjDu-HZrJy1Bt4nGDyEO7ZfsaLyHl1mI-D4IWEFg7_vfKqVXfFpg9uF8SedSSvzzFqJsGBc_hlm000F__0m00)
+    - Giải thích:
+       - PatientProfile
+         - Thuộc tính:
+           - Identifier: Mã định danh của bệnh nhân
+           - PersonalInformation: Thông tin cá nhân của bệnh nhân
+           - RiskOfViolence: Đánh giá rủi ro bạo lực hoặc tự gây hại
+           - Diagnosis: Chẩn đoán tình trạng
+           - Treatment: Phương pháp điều trị
+           - PrescriptionMedications: Các loại thuốc đã kê đơn
+           - Consultation: Các cuộc tư vấn
+           - Introduction: Giới thiệu
+       - Medication
+         - Thuộc tính:
+           - MedicationId: Mã thuốc (dùng để xác định duy nhất thuốc)
+           - Name:  Tên thuốc
+           - Description: Mô tả về thuốc (công dụng, cách sử dụng, v.v.)
+           - Dosage: Liều lượng (ví dụ: 500mg, 2 viên mỗi ngày)
+           - AdministrationRoute: Đường sử dụng thuốc (uống, tiêm, bôi, v.v.)
+           - Frequency: Tần suất sử dụng (ví dụ: mỗi ngày 3 lần)
+           - StartDate: Ngày bắt đầu dùng thuốc
+           - EndDate: Ngày kết thúc dùng thuốc (nếu có)
+           - SideEffects: Tác dụng phụ của thuốc (nếu có)
+           - Contraindications: Chống chỉ định (những trường hợp không nên sử dụng thuốc này)
+           - PrescribingDoctor: Bác sĩ kê đơn thuốc
+           - PrescriptionStatus: Trạng thái kê đơn (chưa sử dụng, đang sử dụng, đã kết thúc)
+       - Consultation
+         - Thuộc tính:
+           - ConsultationId: Mã định danh duy nhất của cuộc tư vấn/thăm khám
+           - ConsultationDate: Ngày và giờ của cuộc tư vấn/thăm khám
+           - Identifier: Mã định danh của bệnh nhân (liên kết với PatientProfile)
+           - StaffId: Mã định danh của bác sĩ hoặc nhân viên y tế
+           - ReasonForVisit: Lý do bệnh nhân đến thăm khám (triệu chứng, vấn đề sức khỏe)
+           - Diagnosis: Chẩn đoán của bác sĩ sau khi thăm khám
+           - TreatmentMethods: Kế hoạch điều trị, bao gồm thuốc, phương pháp điều trị, v.v.
+           - Prescription: Danh sách thuốc kê đơn (nếu có)
+           - FollowUpDate: Ngày hẹn tái khám (nếu có)
+           - Notes: Ghi chú bổ sung từ bác sĩ (thông tin quan trọng, khuyến cáo, v.v.)
+           - ConsultationType: Loại cuộc thăm khám (Khám bệnh, tư vấn sức khỏe, khám định kỳ, v.v.)
+       - PatientRecordManagementSystem
+         - Thuộc tính:
+           - addPatientProfile(): Thêm hồ sơ bệnh nhân mới.
+           - getPatientProfile(): Lấy hồ sơ của bệnh nhân theo mã định danh.
+           - updatePatientProfile(): Cập nhật thông tin hồ sơ bệnh nhân.
+       - MedicineManagementSystem:
+         - Thuộc tính:
+           - medicineList: Danh sách các loại thuốc.
+           - addMedication(): Thêm một loại thuốc mới vào hệ thống.
+           - getMedication(): Tìm kiếm thuốc theo mã định danh.
+       - PrescriptionController:
+         - Thuộc tính:
+           - processPrescriptionRequest(): Xử lý các yêu cầu kê đơn thuốc từ giao diện FormPrescriptionUI.
+           - savePrescription(): Lưu đơn thuốc vào hệ thống hồ sơ bệnh nhân sau khi đã xác nhận.
+       - FormPrescriptionUI (Giao diện kê đơn thuốc):
+         - Thuộc tính:
+           - searchMedication(): Tìm kiếm thuốc có sẵn trong hệ thống thuốc.
+           - addMedicationToPrescription(): Thêm thuốc đã chọn vào đơn kê cho bệnh nhân.
 3. Cung cấp thông tin về thuốc và chẩn đoán
- - Các lớp phân tích của ca sử dụng Quản lý thuốc và điều trị:
+ - Các lớp phân tích của ca sử dụng Cung cấp thông tin về thuốc và chẩn đoán:
     - Entity:
       - ClinicalStaff: Lớp này đại diện cho nhân viên lâm sàng yêu cầu tìm kiếm các loại thuốc.
       - MedicineManagementSystem: Lớp này đại diện cho cơ sơ dữ liệu chứa các loại thuốc đã được phê duyệt bởi cơ quan y tế.
@@ -178,4 +240,39 @@
   - Biểu đồ sequence:
     ![Diagram](https://www.planttext.com/plantuml/png/b9CzQWCn48LxdM8ku0kuC0P3VWf3m4wHKiYoFNXtTgsTDRWCALAaoWb2224GOjAaMXKk3Bd7d21N23QOhBrQBsablK_lwOr-_BgRiNQSnv7IXXC7lGW9ZOu6hCTZbMh7Q33Ln72MkFZAsSmuJ1aJkhuysExR4Heasqk8NH95rbNKfIDa3GVbVKrwOcDBF5XcR6Ebr84bQ7K2JjfmBdw5iDoyvs2aUCk1Dnynp52ATGmypSK_6bKLGglLESpSXfi_24sbMAN0qyqNJO2HzgZTFkqk-O-_qw2GlKxWOUlIxcDM5NjNHmqqWGAIigFZhjemBAc1NK8JCD_Fa8b_Wf7uJuXG_7skwWWDTBU4XHIl58uRWWL33vqKBx0GVmipATOCytoxK9gOfkJLBkf0zLs49-IKeURHlK3nTzlP4lzGHYdLjJJQ_l9V0000__y30000)
   - Biểu đồ lớp:\
-    ![Diagram](https://www.planttext.com/plantuml/png/b9CzQWCn48LxdM8ku0kuC0P3VWf3m4wHKiYoFNXtTgsTDRWCALAaoWb2224GOjAaMXKk3Bd7d21N23QOhBrQBsablK_lwOr-_BgRiNQSnv7IXXC7lGW9ZOu6hCTZbMh7Q33Ln72MkFZAsSmuJ1aJkhuysExR4Heasqk8NH95rbNKfIDa3GVbVKrwOcDBF5XcR6Ebr84bQ7K2JjfmBdw5iDoyvs2aUCk1Dnynp52ATGmypSK_6bKLGglLESpSXfi_24sbMAN0qyqNJO2HzgZTFkqk-O-_qw2GlKxWOUlIxcDM5NjNHmqqWGAIigFZhjemBAc1NK8JCD_Fa8b_Wf7uJuXG_7skwWWDTBU4XHIl58uRWWL33vqKBx0GVmipATOCytoxK9gOfkJLBkf0zLs49-IKeURHlK3nTzlP4lzGHYdLjJJQ_l9V0000__y30000)
+    ![Diagram](https://www.planttext.com/plantuml/png/b5HBJiCm4Dtd55OtRP5QmRP2g11QgH95g147CFQajHIFYpq1LQWdOy6Hk0AAapgjamrPnCxytfjdJtw_V-QEkALI5ycGBP0K7PWek7FW4h-oj52e12youddElXBc7_-raZEMaLMuRQp8DKGcQuhMT4oQeckGIYY4DKU-1Gr8sS4Hw51VDm5Foj6CLUzRdyD96RnhWhYKhN6amtPMr_VxyOnz62MRZ2rGRqRRoVWyEIBiRO5YQ-heyDpLuH6Si6fVqxlq6CUtSVYzr0gL8-i1DgQaE69fuRq458V8dYa9Ypm7GIxof0R9SeKdsgt_c2H3zc1AbDp6vxyqLh_OblthAYZWW5knEnDqt7DKGSAgqEdSKuC8WlvTQLWtOOg8v5dTobk03QNtrWXmBlC8cqepHwF-Mw4GLfWRgmC77-HnDr3KektKth4te4y032pIYo4Pt0pOPEANhdf9Zw1d2TrEafxc8eH8LWyHIzs34KzVGEgCvIdvUZgzQlBh0Pa3okhdyGS00F__0m00)
+    - Giải thích:
+      - ClinicalStaff
+        - Thuộc tính:
+          - StaffId: Mã của mỗi nhân viên lâm sàng
+          - name: Tên của mỗi nhân viên lâm sàng
+          - role: Vai trò của mỗi nhân viên lâm sàng
+      - MedicineManagementSystem
+        - Thuộc tính:
+          - medicineList: Danh sách các loại thuốc đã được phê duyệt và lưu trữ trong hệ thống. 
+          - addMedication(medication: Medication): Phương thức để thêm một loại thuốc vào trong hệ thống.
+          - getMedication(medicationId: String): Phương thức để tìm kiếm một loại thuốc theo MedicationId.
+      - Medication
+        - Thuộc tính:
+          - MedicationId: Mã thuốc (dùng để xác định duy nhất thuốc)
+          - Name:  Tên thuốc
+          - Description: Mô tả về thuốc (công dụng, cách sử dụng, v.v.)
+          - Dosage: Liều lượng (ví dụ: 500mg, 2 viên mỗi ngày)
+          - AdministrationRoute: Đường sử dụng thuốc (uống, tiêm, bôi, v.v.)
+          - Frequency: Tần suất sử dụng (ví dụ: mỗi ngày 3 lần)
+          - StartDate: Ngày bắt đầu dùng thuốc
+          - EndDate: Ngày kết thúc dùng thuốc (nếu có)
+          - SideEffects: Tác dụng phụ của thuốc (nếu có)
+          - Contraindications: Chống chỉ định (những trường hợp không nên sử dụng thuốc này)
+          - PrescribingDoctor: Bác sĩ kê đơn thuốc
+          - PrescriptionStatus: Trạng thái kê đơn (chưa sử dụng, đang sử dụng, đã kết thúc)
+      - FormPrescriptionUI
+        - Thuộc tính:
+          - searchMedication(): Phương thức cho phép người dùng tìm kiếm các loại thuốc trong cơ sở dữ liệu MedicineManagementSystem dựa trên các tiêu chí nhất định.
+      - FormMedicineConnect
+        - Thuộc tính:
+          - searchMedication(): Phương thức cho phép gửi yêu cầu tìm kiếm thuốc từ FormMedicineConnect đến MedicineManagementSystem để lấy các thông tin chi tiết về thuốc.
+      - MedicineController
+        - Thuộc tính:
+          - processSearchRequest(): Phương thức chịu trách nhiệm xử lý các yêu cầu tìm kiếm thuốc. Khi nhận được yêu cầu từ FormPrescriptionUI, MedicineController sẽ điều phối yêu cầu này và gọi các phương thức thích hợp để tìm thuốc từ hệ thống.
+          - getMedicineInformation(): Phương thức nhận thông tin chi tiết về các loại thuốc từ hệ thống và cung cấp dữ liệu này cho FormPrescriptionUI hoặc các phần khác trong hệ thống nếu cần.
