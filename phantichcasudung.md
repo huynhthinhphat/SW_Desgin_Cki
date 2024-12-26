@@ -149,3 +149,33 @@
   - Biểu đồ lớp:\
     ![Diagram](https://www.planttext.com/plantuml/png/Z5JDRjim3BxhAOHS0WneqLrxABebAU13so3UTjSasY0cKnj57u9YJxR37cclCDXkOicDqrmicpyVoU-ZzU_Ft_ieXgLjl59BlI51sMlhJOmGLN_ghH44aYs72Zte5wMrBXoGO8N0jxeKHgexwnOu1ZA-e2fmOmG3fUuTnX_FrJSC7iX2wbcZgIb4ZAdn2uEH1aYo4WpHClxii1_1eUshP7chGB7rygPyGSB1jJQp_rRvb3kmWTsZ8LD3LxlSHu56lnpZLXu9hV6bcAeQoEXV2vVM8jDa0tBmu_SHQnnW01g_SxId2Tfwv20pXsZgBF2JQv0m2lUWkz1AvdvW-DK2sNrgBBjzM9ikidjsfWsvt52YWqrLWPKfyy86wQGihyfzHwhNmKhWELbBCTB66RQGuAGuI_qvjEGCJxVt8N2Jedyj4Z6tvqHV1IAmaeJFTP16BWSMWX_wE1HAEdZrU-0-8L-enSU5lhhgZxUTgnF390cdYwYPscdY1JIeYxYw5FGysX7cvlhwms9o0SqGDeIEVz3viU_wynqzrNjw9zFEXHu6FToUi-tERlTinZaU9fIfUo3NtV7_0G00__y30000)
 3. Cung cấp thông tin về thuốc và chẩn đoán
+ - Các lớp phân tích của ca sử dụng Quản lý thuốc và điều trị:
+    - Entity:
+      - ClinicalStaff: Lớp này đại diện cho nhân viên lâm sàng yêu cầu tìm kiếm các loại thuốc.
+      - MedicineManagementSystem: Lớp này đại diện cho cơ sơ dữ liệu chứa các loại thuốc đã được phê duyệt bởi cơ quan y tế.
+      - Medication: Lớp này đại diện cho các loại thuốc trong cơ sở dữ liệu.
+    - Boundary:
+      - FormPrescriptionUI: Giao diện mà nhân viên lâm sàng sử dụng tìm các loại thuốc để kê vào một đơn thuốc.
+      - FormMedicineConnect: Giao diện tương tác với hệ thống quản lý thuốc được duyệt bởi cơ quan y tế.
+    - Control:
+      - MedicineController: Điều phối quá trình tìm đơn các loại thuốc trong cơ sở dữ liệu. Xử lý các yêu cầu tìm kiếm thuốc và thông tin chẩn đoán từ FormPrescriptionUI. FormMedicineConnect hỗ trợ hệ thống tìm kiếm thuốc từ MedicineManagementSystem.
+  - Quan hệ giữa các lớp phân tích:
+    - FormMedicineConnect và MedicineManagementSystem:
+       - Loại mối quan hệ: Một - Một.
+       - Giải thích: Mỗi FormMedicineConnect có thể yêu cầu MedicineManagementSystem tìm kiếm các loại thuốc theo yêu cầu tại một thời điểm.
+    - MedicineManagementSystem và Medication:
+       - Loại mối quan hệ: Một - Nhiều.
+       - Giải thích: Một MedicineManagementSystem có thể chứa nhiều Medication nghĩa là các loại thuốc sẽ được lưu vào trong cơ sở dữ liệu MedicineManagementSystem và đã được phê duyệt bởi cơ sở y tế.
+    - ClinicalStaff và FormPrescriptionUI:
+       - Loại mối quan hệ: Một - Một.
+       - Giải thích: Mỗi ClinicalStaff có thể tương tác với một FormPrescriptionUI để gửi thông tin các loại thuốc và yêu cầu tìm kiếm loại thuốc đó trong cơ sở dữ liệu.
+    - MedicineController và FormMedicineConnect:
+       - Loại mối quan hệ: Một - Một.
+       - Giải thích: Một MedicineController có thể gửi yêu cầu tìm kiếm tới MedicineManagementSystem thông qua một FormMedicineConnect.
+    - FormPrescriptionUI và MedicineController:
+       - Loại mối quan hệ: Một - Một.
+       - Giải thích: Một FormPrescriptionUI có thể gửi yêu cầu và thông tin cần tìm đến một MedicineController tại một thời điểm nhất định để yêu cầu tìm thông tin các loại thuốc.
+  - Biểu đồ sequence:
+    ![Diagram](https://www.planttext.com/plantuml/png/b9CzQWCn48LxdM8ku0kuC0P3VWf3m4wHKiYoFNXtTgsTDRWCALAaoWb2224GOjAaMXKk3Bd7d21N23QOhBrQBsablK_lwOr-_BgRiNQSnv7IXXC7lGW9ZOu6hCTZbMh7Q33Ln72MkFZAsSmuJ1aJkhuysExR4Heasqk8NH95rbNKfIDa3GVbVKrwOcDBF5XcR6Ebr84bQ7K2JjfmBdw5iDoyvs2aUCk1Dnynp52ATGmypSK_6bKLGglLESpSXfi_24sbMAN0qyqNJO2HzgZTFkqk-O-_qw2GlKxWOUlIxcDM5NjNHmqqWGAIigFZhjemBAc1NK8JCD_Fa8b_Wf7uJuXG_7skwWWDTBU4XHIl58uRWWL33vqKBx0GVmipATOCytoxK9gOfkJLBkf0zLs49-IKeURHlK3nTzlP4lzGHYdLjJJQ_l9V0000__y30000)
+  - Biểu đồ lớp:\
+    ![Diagram](https://www.planttext.com/plantuml/png/b9CzQWCn48LxdM8ku0kuC0P3VWf3m4wHKiYoFNXtTgsTDRWCALAaoWb2224GOjAaMXKk3Bd7d21N23QOhBrQBsablK_lwOr-_BgRiNQSnv7IXXC7lGW9ZOu6hCTZbMh7Q33Ln72MkFZAsSmuJ1aJkhuysExR4Heasqk8NH95rbNKfIDa3GVbVKrwOcDBF5XcR6Ebr84bQ7K2JjfmBdw5iDoyvs2aUCk1Dnynp52ATGmypSK_6bKLGglLESpSXfi_24sbMAN0qyqNJO2HzgZTFkqk-O-_qw2GlKxWOUlIxcDM5NjNHmqqWGAIigFZhjemBAc1NK8JCD_Fa8b_Wf7uJuXG_7skwWWDTBU4XHIl58uRWWL33vqKBx0GVmipATOCytoxK9gOfkJLBkf0zLs49-IKeURHlK3nTzlP4lzGHYdLjJJQ_l9V0000__y30000)
