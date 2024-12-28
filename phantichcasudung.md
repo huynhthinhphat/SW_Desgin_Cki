@@ -1,103 +1,47 @@
 1. Cập nhật hồ sơ bệnh nhân
   - Các lớp phân tích của ca sử dụng Cập nhật hồ sơ bệnh nhận:
-    - Entity:
-      - PatientProfile: Lớp này đại diện cho hồ sơ bệnh nhân gồm các thông tin như mã định danh bệnh nhân duy nhất, thông tin cá nhân, đánh giá rủi ro về tự gây hại/bạo lực, chẩn đoán các tình trạng, phương pháp điều trị, các loại thuốc đã kê đơn, các cuộc tư vấn, giới thiệu.
-      - PatientDatabase: Lớp này đại diện cho hệ thống quản lý hồ sơ bệnh nhân, là cơ sơ dữ liệu chứa các hồ sơ bệnh nhân.
-      - Medication: Lớp này đại diện cho các loại thuốc mà bệnh nhân đã và đang sử dụng.
-      - Consultation: Lớp này đại diện cho những cuộc tư vấn về tình trạng sức khỏe của bệnh nhân. Mỗi cuộc tư vấn sẽ ghi lại thông tin về vấn đề sức khỏe hiện tại của bệnh nhân, chẩn đoán, điều trị, kế hoạch theo dõi,...
-      - InformationOfTheMentalHealthAct: Lớp này đại diện cho thông tin về các đánh giá giam giữ được thực hiện theo Đạo luật Sức khỏe Tâm thần.
     - Boundary:
       - UpdateForm: Giao diện mà nhân viên lâm sàng sử dụng để tra cứu và cập nhật hồ sơ của bệnh nhân nếu cần. Giao diện sẽ hiển thị thông tin của bệnh nhân, lịch sử các cuộc tư vấn và ghi lại các phương pháp điều trị và thuốc đã kê đơn.
       - PatientConnect: Giao diện tương tác với hệ thống quản lý hồ sơ bệnh nhân khi nhân viên lâm sàng cần cập nhật hồ sơ bệnh nhân.
     - Control:
       - PatientController: Điều phối quá trình cập nhật hồ sơ bệnh nhân. Xử lý các yêu cầu để cập nhật hồ sơ của bệnh nhân từ FormUpdateUI. Dữ liệu sau khi được xử lý sẽ được lưu vào PatientDatabase.
-  - Biểu đồ sequence:
-    ![Diagram](https://www.planttext.com/plantuml/png/Z5AzRjim6Dpv50VlVW4FHc2vFmQA8e3Z8ICj4P4GYKgaJmOy5XqoT0hw0ac3e6YGe1qwYOC71daFFa5VeI2jM5HgEztuStSVxuv_rEgW95vGbQMCXvGNw7sCzJU9HQBlP0-yH31bexoI4I-MwCtE8axYRLvaxcusOK4kgSXJz0uv9K9Iiqz5iMPljfvA2vKYf6USNRCtaX9g8MDEVCvBuJ3Z4MF15FqXPfC1ZlLTXT3KtojGmH4QzQD2RDHNb4_Nc1jr8MD8QuRD9kZtXmYc7PQCJVrm1ehrRta2IgGxbo1zdtbptXdra63fJTFt6KuJKwyofppqJBu2Ru4DpNhUmM7DjKMEHmCSjJexR8v76snHBR4mzUtpuMRKKM7g6voQUaKuh-pQlU_nykcNKJUXFzHtzHyqpvYDxJL6aznqWFU9KPybA3Rgonu2uocjGw3OrBVBJGWCsFehGbUlQvbyyB-TVN1wtaTOw2kSl2p5rxCpjtTvl8_WzndupukC-eaqCUgY_SCCQ1iDkbfRMrqOzQaJuEu7xEzshrDNxZggkRxEyNYfkmmRv9MC4LfCc_VBffkudKQ78T9IC2PanDY1a56LfNy1003__mC0)
-  - Biểu đồ lớp:\
-    ![Diagram](https://www.planttext.com/plantuml/png/b5JDRjim3BxxAOoSjW4jjcin1CtY1WkmD45-UcSbAX4cYvb8OoY6FjaEUwIzmc0xZgKaxRQB3P4VAVBxIFt--UkM1O9KfSiovO0vdr0eDtiDWfjf_YFByxngJWiGYruMWOnr-EPjzjn5f9usPghHYpKMmqs-ac3zjhOkC31vS5DlA9GWbdpiNbh-EZSFbXnwXR6diB3rn9PZupeWI8bUaYi2iWfsN-UUeRQgkOLlyY-MvMDl6TRWCNckd1mAQH2ngS5ClGJIbKgAFUrzJ3NAEGp_HLa10e_01yxQ-vtrLe5R2HWpx2FwobjmVvxgkFzxA5FcUZeICp5i4-18bzPRbj0aNL8bYNiIy5k5NZt5nbKzEmNKoFfRc-wyJWqhg_7E65IIYDSm1jP72fs9-6ZzjY0b55vIU2KWLHzwP2jMiUKhjgICZIDFMlhb8MwKILCi4PZyXCA3PIl_FhWpb1tfIwsV2JOXv-ZxPfzMU4-2_58pwwSzdbCJxTxSh7SuGo_WFYCusOsKj6pLKyJ9A2PDWU3SZ9YHkTs_8sEyH4LbYLvtgduYSWY-wSs1mhafK6fUJmQooHcvkfIlaTK6BT4XSCVASvObJzZWmo2_kXes_yNfjcRd-ti1twrfXpwkxGNiOTaxQFSejiXyyFxw-jqWMjxNSR6Qbv733leNMRFi5hskIlS7003__mC0)
-    
-2. Quản lý thuốc và điều trị
- - Các lớp phân tích của ca sử dụng Quản lý thuốc và điều trị:
     - Entity:
       - PatientProfile: Lớp này đại diện cho hồ sơ bệnh nhân gồm các thông tin như mã định danh bệnh nhân duy nhất, thông tin cá nhân, đánh giá rủi ro về tự gây hại/bạo lực, chẩn đoán các tình trạng, phương pháp điều trị, các loại thuốc đã kê đơn, các cuộc tư vấn, giới thiệu.
       - PatientDatabase: Lớp này đại diện cho hệ thống quản lý hồ sơ bệnh nhân, là cơ sơ dữ liệu chứa các hồ sơ bệnh nhân.
-      - MedicineDatabase: Lớp này đại diện cho cơ sơ dữ liệu chứa các loại thuốc đã được phê duyệt bởi cơ quan y tế.
-      - NoticeDatabase: Lớp này đại diện cho cơ sở dữ liệu chứa các thông báo và danh tính của nhân viên lâm sàng khi bỏ qua thông báo cảnh báo.
-      - Medication: Lớp này đại diện cho các loại thuốc mà bệnh nhân đã và đang sử dụng.
+  - Biểu đồ sequence:
+    ![Diagram](https://www.planttext.com/plantuml/png/Z5CnRjim5DrvYWVjle078x3SfbuA0Ow7ZBIiHe8bAfM_37WiEWH59wCNi1i4ROCOxP1973mmo3ruWbwX46LBT18xtKZ-z_xZ-tpyApSdK-8PvKdCk4zf1kTzgBuBp29rAnpmATm1wwQv6FDi3cTuEUOKl4spnDI6VVP6K4HpE1wdA13aPUc7A0vCrVEOcmhAqhWkR_Tna5MzwwsbqK15uDCELwwVYlKuyH6VLcgzBcFk0AqEXlqspjLj3byNFt9Gnk5h-Ij7gEKtJ1zN66bv9KA8qYeRzj5gTU0EzbWYrCNw4XIgUt41YeGv5o1rbrWwfrgk8ymjDNMNO1BfOfEOpXtBv2lm1hYbbPuFSDYsN29xtJREcZu7RFQwDJRBvvZfucPtM4kTPRgunaGN6yB7l5oR-pqi7lzeUUtRehQh_w1PnZolZLEr4aS8dhURxskjjoCUjF4kqlAp08LQVZr2O3mcE6PS5EhYPbwFos50yx1kgEKN4MAgvPfZffRs2_Wc6oOYLFCPKDscDZXJonGF2oqN4SZeYmi6LEwEnc9FOA9-9Y-qEH2NyvUxL0GxCgwjCTRoD-98owlccp2W2OsDhWjFWZFJyjFUw0zVu7XydlCifoOMrRSSgLKvOBNFA3_jKeJmIqpzAiyoiltQfiSU8n1Znau2CSwJ-1y0003__mC0)
+  - Biểu đồ lớp:\
+    ![Diagram](https://www.planttext.com/plantuml/png/h99DJiCm48NtFeMNiEW5AXHLQeKK2KJ4tzuuap326LSpanNYP2mu4bT03WcD6q4tB3tlyxpd9t--Vsn47MlV1MDyS2BsOLyxXSl8dNqrrjf-E5TE4KWhZWq6E3jFYe1Z_xnGtgPDkVAzhQo151i4NjixPQGsJIjWYUH2IKtapYb6ciktA2ytpIF60EHXhkpGjHG5PJwyPt3Q0MbcmI2USPzsNqEDVd2HjRr2qOl3f4ZmDfBqGSSW0p4V3Kn9oh7kVHRs-EtRcAWGWF-fp9rJz-HaR7D8bjyf_hPfGKzwR2CHU3qH-9TDX--pMXLssODPDcEFo6G-mz8nPwOI9kYdb8mQOncp0QhJ1_y2003__mC0)
+    
+2. Quản lý thuốc và điều trị
+ - Các lớp phân tích của ca sử dụng Quản lý thuốc và điều trị:
     - Boundary:
       - CreateForm: Giao diện mà nhân viên lâm sàng sử dụng để thêm các loại thuốc vào một đơn thuốc.
       - PatientConnect: Giao diện tương tác với hệ thống quản lý hồ sơ bệnh nhân khi nhân viên lâm sàng cần cập nhật hồ sơ bệnh nhân.
       - MedicineConnect: Giao diện tương tác với hệ thống quản lý hồ sơ bệnh nhân khi nhân viên lâm sàng cần tạo đơn thuốc cho bệnh nhân.
     - Control:
       - PrescriptionController: Điều phối quá trình tạo đơn thuốc cho bệnh nhân. Xử lý các yêu cầu tìm kiếm thuốc và thêm các loại thuốc vào một đơn từ FormPrescriptionUI. Dữ liệu sau khi được xử lý sẽ được lưu vào PatientDatabase.
-  - Biểu đồ sequence:
-    ![Diagram]()
-  - Biểu đồ lớp:\
-    ![Diagram](https://www.planttext.com/plantuml/png/Z5J1JkCm4BtxAwAUM2GGND6gOjM2L8aj5K5x7-n9DLfd3FRaW5PysHxsa_W5PBT9xD1gkIJAp7lZDvutUV_xxpe8UEbQgvJI5aAeDY24B1ll6h9O_L5LLQqCib13wA-gMZpnDaOtw8DZi2jkd6z1o76UVg3m-xxvHSuYQympIu8jkq0X3pvw16cHfJZ2Oz2UdcFjdsX8frF2LNL7GRwFaNa4Bno7pifUI4BaeOHPiNXdEbs8VPlqlWI19mZxvdU5B35fiBL0qyn7Hf90Z2L5nrwmpvry6_5h9wG7T0RU9NBe8iLldMy_5KtzvDYzy8LZHYqxVFTiGB0SPyxfvHMauyhpKInSl4PhqV-FDShT8SVlbSa7lOQsjCXuM15s0RO5y8TfYIc8JqKVN2T5-jRZIuUiN_DW7Js_X8YCpnYwOLC6QZ9uqpIefN1fwXo8Coj-SkiJyNRfjBXoMxBxgmMa6wblIcN3dbtEghEpUNeVldHrP1O3y-By_7GsCSKNIHDNV96rBcoj9dQSNIRGq5IvPJrwMA73RUmTtAFx_zCX-MaoQkhlYOhfvWxuOpgoqkeQsSIVvWS0003__mC0)
-    
-3. Cung cấp thông tin về thuốc và chẩn đoán
- - Các lớp phân tích của ca sử dụng Cung cấp thông tin về thuốc và chẩn đoán:
     - Entity:
-      - ClinicalStaff: Lớp này đại diện cho nhân viên lâm sàng yêu cầu tìm kiếm các loại thuốc.
-      - MedicineManagementSystem: Lớp này đại diện cho cơ sơ dữ liệu chứa các loại thuốc đã được phê duyệt bởi cơ quan y tế.
-      - Medication: Lớp này đại diện cho các loại thuốc trong cơ sở dữ liệu.
-    - Boundary:
-      - FormPrescriptionUI: Giao diện mà nhân viên lâm sàng sử dụng tìm các loại thuốc để kê vào một đơn thuốc.
-      - FormMedicineConnect: Giao diện tương tác với hệ thống quản lý thuốc được duyệt bởi cơ quan y tế.
-    - Control:
-      - MedicineController: Điều phối quá trình tìm đơn các loại thuốc trong cơ sở dữ liệu. Xử lý các yêu cầu tìm kiếm thuốc và thông tin chẩn đoán từ FormPrescriptionUI. FormMedicineConnect hỗ trợ hệ thống tìm kiếm thuốc từ MedicineManagementSystem.
-  - Quan hệ giữa các lớp phân tích:
-    - FormMedicineConnect và MedicineManagementSystem:
-       - Loại mối quan hệ: Một - Một.
-       - Giải thích: Mỗi FormMedicineConnect có thể yêu cầu MedicineManagementSystem tìm kiếm các loại thuốc theo yêu cầu tại một thời điểm.
-    - MedicineManagementSystem và Medication:
-       - Loại mối quan hệ: Một - Nhiều.
-       - Giải thích: Một MedicineManagementSystem có thể chứa nhiều Medication nghĩa là các loại thuốc sẽ được lưu vào trong cơ sở dữ liệu MedicineManagementSystem và đã được phê duyệt bởi cơ sở y tế.
-    - ClinicalStaff và FormPrescriptionUI:
-       - Loại mối quan hệ: Một - Một.
-       - Giải thích: Mỗi ClinicalStaff có thể tương tác với một FormPrescriptionUI để gửi thông tin các loại thuốc và yêu cầu tìm kiếm loại thuốc đó trong cơ sở dữ liệu.
-    - MedicineController và FormMedicineConnect:
-       - Loại mối quan hệ: Một - Một.
-       - Giải thích: Một MedicineController có thể gửi yêu cầu tìm kiếm tới MedicineManagementSystem thông qua một FormMedicineConnect.
-    - FormPrescriptionUI và MedicineController:
-       - Loại mối quan hệ: Một - Một.
-       - Giải thích: Một FormPrescriptionUI có thể gửi yêu cầu và thông tin cần tìm đến một MedicineController tại một thời điểm nhất định để yêu cầu tìm thông tin các loại thuốc.
+      - PatientDatabase: Lớp này đại diện cho hệ thống quản lý hồ sơ bệnh nhân, là cơ sơ dữ liệu chứa các hồ sơ bệnh nhân.
+      - MedicineDatabase: Lớp này đại diện cho cơ sơ dữ liệu chứa các loại thuốc đã được phê duyệt bởi cơ quan y tế.
+      - NoticeDatabase: Lớp này đại diện cho cơ sở dữ liệu chứa các thông báo và danh tính của nhân viên lâm sàng khi bỏ qua thông báo cảnh báo.
+      - Medication: Lớp này đại diện cho các loại thuốc mà bệnh nhân đã và đang sử dụng.
   - Biểu đồ sequence:
-    ![Diagram](https://www.planttext.com/plantuml/png/b9CzQWCn48LxdM8ku0kuC0P3VWf3m4wHKiYoFNXtTgsTDRWCALAaoWb2224GOjAaMXKk3Bd7d21N23QOhBrQBsablK_lwOr-_BgRiNQSnv7IXXC7lGW9ZOu6hCTZbMh7Q33Ln72MkFZAsSmuJ1aJkhuysExR4Heasqk8NH95rbNKfIDa3GVbVKrwOcDBF5XcR6Ebr84bQ7K2JjfmBdw5iDoyvs2aUCk1Dnynp52ATGmypSK_6bKLGglLESpSXfi_24sbMAN0qyqNJO2HzgZTFkqk-O-_qw2GlKxWOUlIxcDM5NjNHmqqWGAIigFZhjemBAc1NK8JCD_Fa8b_Wf7uJuXG_7skwWWDTBU4XHIl58uRWWL33vqKBx0GVmipATOCytoxK9gOfkJLBkf0zLs49-IKeURHlK3nTzlP4lzGHYdLjJJQ_l9V0000__y30000)
+    ![Diagram](https://www.planttext.com/plantuml/png/p5GzRjim6DrvYW_QUu4CHM3PJOFMHb0dGqT68Yp24kLGb06DHOSEHL5upbBN28gc2P2XapXaK91xy0IzGa59baGfTeHEzM1Bvdll-tly_iZxmqXWBkB0HzWH8GThucNV6InfTiqim17OKpG8O-PYde1bSu85UHNo83yxEqOZ9gX8m1eJbpfOqB1WZKV83fdWeG_M2IUHm-b27vP_-eGNujLh8qWkHHcnGyQ88xP0_Mo6eumCiS3dE295KE9EaqYGe25sWWKbJ3IrtX4dv6vRiGGQWiD1TJm91NNCS9FX025x2YzUmjdn0RpFhcDmLFeZ1f7T122yMCcLWywEDSAU6WZcgVHs0SBBVhCP2CegU2quAJ3Bx1iaflPMi-hU0HmfUKlRk5gqGfOyNNeFaePfHjNPvpWLiCKwvN42IvLUiIQacSifL-a6vYgz5t0HgtHJns-L-YIoAa_77Ht0KRPcyB1ISaL1FDufkM4pD1xbvxgvHHakPXv4sThnEbZTud9khwcI7_M4bFpSe204K4_BzfJyKesnCpKlkmxWOVMuPWYW6D_ED05qecRHRrLwbJJpRGMOwnm341nNKSoX6wutlDYcLiC4awHLXeE-rE5WYt-p0mI1afSK0I00x0km1af-OXwmV0ETvytMNqh-r7Ua85a8ye-MxrRLjKQ1RjNnvDtfibgsgcrJNjlpR1tgHcoObp-Nj5tEsSygV_96D7QmxiDNk8Xnax9jGjD_tNj9LNg_0A7abLFuhsBrMHy6mRJIfEK2__4kRgoo7QpT1cnSZeutdfnVnuVFAzHsFEs5xU-jVtLNFtyPCtl6LIMM-14nFJGlCVkjrCt6zk8a3-NfrNJ9Ph1KyWFCA0x1fVgsbfslh_t-PCskBvNyXK6ej4wTkMXRWB4DoWhSlVkWttp_bytHVrlebZ0N7HBcne7_5m00__y30000)
   - Biểu đồ lớp:\
-    ![Diagram](https://www.planttext.com/plantuml/png/b5HBJiCm4Dtd55OtRP5QmRP2g11QgH95g147CFQajHIFYpq1LQWdOy6Hk0AAapgjamrPnCxytfjdJtw_V-QEkALI5ycGBP0K7PWek7FW4h-oj52e12youddElXBc7_-raZEMaLMuRQp8DKGcQuhMT4oQeckGIYY4DKU-1Gr8sS4Hw51VDm5Foj6CLUzRdyD96RnhWhYKhN6amtPMr_VxyOnz62MRZ2rGRqRRoVWyEIBiRO5YQ-heyDpLuH6Si6fVqxlq6CUtSVYzr0gL8-i1DgQaE69fuRq458V8dYa9Ypm7GIxof0R9SeKdsgt_c2H3zc1AbDp6vxyqLh_OblthAYZWW5knEnDqt7DKGSAgqEdSKuC8WlvTQLWtOOg8v5dTobk03QNtrWXmBlC8cqepHwF-Mw4GLfWRgmC77-HnDr3KektKth4te4y032pIYo4Pt0pOPEANhdf9Zw1d2TrEafxc8eH8LWyHIzs34KzVGEgCvIdvUZgzQlBh0Pa3okhdyGS00F__0m00)
-    - Giải thích:
-      - ClinicalStaff
-        - Thuộc tính:
-          - StaffId: Mã của mỗi nhân viên lâm sàng
-          - name: Tên của mỗi nhân viên lâm sàng
-          - role: Vai trò của mỗi nhân viên lâm sàng
-      - MedicineManagementSystem
-        - Thuộc tính:
-          - medicineList: Danh sách các loại thuốc đã được phê duyệt và lưu trữ trong hệ thống. 
-          - addMedication(medication: Medication): Phương thức để thêm một loại thuốc vào trong hệ thống.
-          - getMedication(medicationId: String): Phương thức để tìm kiếm một loại thuốc theo MedicationId.
-      - Medication
-        - Thuộc tính:
-          - MedicationId: Mã thuốc (dùng để xác định duy nhất thuốc)
-          - Name:  Tên thuốc
-          - Description: Mô tả về thuốc (công dụng, cách sử dụng, v.v.)
-          - Dosage: Liều lượng (ví dụ: 500mg, 2 viên mỗi ngày)
-          - AdministrationRoute: Đường sử dụng thuốc (uống, tiêm, bôi, v.v.)
-          - Frequency: Tần suất sử dụng (ví dụ: mỗi ngày 3 lần)
-          - StartDate: Ngày bắt đầu dùng thuốc
-          - EndDate: Ngày kết thúc dùng thuốc (nếu có)
-          - SideEffects: Tác dụng phụ của thuốc (nếu có)
-          - Contraindications: Chống chỉ định (những trường hợp không nên sử dụng thuốc này)
-          - PrescribingDoctor: Bác sĩ kê đơn thuốc
-          - PrescriptionStatus: Trạng thái kê đơn (chưa sử dụng, đang sử dụng, đã kết thúc)
-      - FormPrescriptionUI
-        - Thuộc tính:
-          - searchMedication(): Phương thức cho phép người dùng tìm kiếm các loại thuốc trong cơ sở dữ liệu MedicineManagementSystem dựa trên các tiêu chí nhất định.
-      - FormMedicineConnect
-        - Thuộc tính:
-          - searchMedication(): Phương thức cho phép gửi yêu cầu tìm kiếm thuốc từ FormMedicineConnect đến MedicineManagementSystem để lấy các thông tin chi tiết về thuốc.
-      - MedicineController
-        - Thuộc tính:
-          - processSearchRequest(): Phương thức chịu trách nhiệm xử lý các yêu cầu tìm kiếm thuốc. Khi nhận được yêu cầu từ FormPrescriptionUI, MedicineController sẽ điều phối yêu cầu này và gọi các phương thức thích hợp để tìm thuốc từ hệ thống.
-          - getMedicineInformation(): Phương thức nhận thông tin chi tiết về các loại thuốc từ hệ thống và cung cấp dữ liệu này cho FormPrescriptionUI hoặc các phần khác trong hệ thống nếu cần.
+    ![Diagram](https://www.planttext.com/plantuml/png/X5D1QiCm4Bph5Juc1t-W59CI9r1eWwbVi94swO8jfTBwK8fVraEVr2yKsN4isKbw4MXcThGhZNw_VrQEmN9JLqB82fnB2c12pJamxC5XyYMI97aXnu-lg4W2az6PQ0Tv1vB6M2yj0kF0BPQZVcUOv4KTY7iYbAuxV6jiFJFjkbWiFUeGh7oFq7OoozfeZP9xb-QaWF7C5DOSgCBGQSRCHetiRazQM7JIqiatjJQQhQagj3Ug_XbaHFlwSV-i7fAIBUcZntTGOxZFnnOYs3WuHi8dLPCcnxOpVJCDH_JMuaU3Mdw6OEcJauDN-jL36wrYe2I5cyC19RkmjBiF83rC4P7dYzkJFkP6ih5No6waae6RiRGL8eXCccRNNq3SU9WqpUAyt15Eed176UTTJ18vdZbLNFvJccR1Sul9oK4l5uSfC6Xw0x52hVn__mC00F__0m00)
+    
+3. Cung cấp thông tin về thuốc
+ - Các lớp phân tích của ca sử dụng Cung cấp thông tin về thuốc và chẩn đoán:
+    - Boundary:
+      - PrescriptionForm: Giao diện mà nhân viên lâm sàng sử dụng tìm các loại thuốc để kê vào một đơn thuốc.
+      - PrescriptionFormConnect: Giao diện tương tác với hệ thống quản lý thuốc được duyệt bởi cơ quan y tế.
+    - Control:
+      - PrescriptionController: Điều phối quá trình tìm đơn các loại thuốc trong cơ sở dữ liệu. Xử lý các yêu cầu tìm kiếm thuốc và thông tin chẩn đoán từ PrescriptionForm. PrescriptionFormConnect hỗ trợ hệ thống tìm kiếm thuốc từ MedicineDatabase.
+    - Entity:
+      - MedicineDatabase: Lớp này đại diện cho cơ sơ dữ liệu chứa các loại thuốc đã được phê duyệt bởi cơ quan y tế.
+      - Medication: Lớp này đại diện cho các loại thuốc trong cơ sở dữ liệu.
+  - Biểu đồ sequence:
+    ![Diagram](https://www.planttext.com/plantuml/png/b9E_JiCm4CPtFyMzG5yWGuKe_mQGaEZ2QDoqjPhOnJbNoeWO69Zw10XL20bHqO4f7ZeKzJtk2VeAAA5LapI1ifxz_VnzT-ULcnz4o0tQC61Se3RG2gIIWWTNoBjTTgYjwd0JmwNn8s7a4ALM9zg4x5YXn1Wk_8uKFAsobbPeT52ukgu5lgb7jRHIli02KIh_Y2E_uP7F62juWaPp1-71ARcfX7ZnPa5Gyce15-yX32Gbyn2mRycD1IlBeD5e5WDxSBr5g3ubqo5WV_6fUe1IRK3PkSgUsD_RxvXTQysQHjPbhGgvLLKvMpV-Fy2SB2MMP-L1EwS4D5hrG2oV8IBt11ro7n18SW-MbPNPA2fm9eOH9I-gQAbINHklRIYPm8ZS7GmecIFSshIGsn1Mc_7FCUn3p8zX4pFxCnwSBsSMliRanX9mEICtKRsVUDc5oc2RfykoVTRxJ9AxJpUGt6FU-pS0003__mC0)
+  - Biểu đồ lớp:\
+    ![Diagram](https://www.planttext.com/plantuml/png/f5DBQiCm4Dth5BDC5hb0A24bJg3GbbAVO2ADKr5vb4fZYYazMHSzKgzGv93OYXCeT6EOD-_Dvutry_MzZ891cjeffHt620zahBPC1GfkCH9yA028X46_T3aKwtdoIksx3sOEfGJBkodSsoWtFM6XFhEA7NYerSTt9tt27x6cOLnGrC7k4p63VSHTHhmrjMKR9NH5dtqZMNeJwAqXrkqGBDFQ1IPc-YPepIO7IcjeNLMa9GwbAyyIqF9nYopv5BgfjvPtXTVYmuLajr8fA4qlFRarv6nygF_eVo8P6_SEsvwLRZAfit0-EjGKu7htbMScBOSX3hPLLNus0E2pom50yAw7BfPV9HkzSnJ-yukDx9hD5bVQPDn1ztF5OEzH-QCVINF-KjJewPnOtRnABObDKxjV0000__y30000)
